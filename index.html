@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            height: 80%;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            overflow: hidden;
+            transition: transform 0.2s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background: url('https://i.pinimg.com/736x/05/36/ae/0536aea6be7e51bb7f0f2fdaa5acc2a5.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .details {
+            display: none;
+            background-color: #ffffffc9;
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card-container">
+        <div class="card" onclick="showDetails(this)">
+            <div class="card-content">
+                <p class="details">Be Kind</p>
+            </div>
+        </div>
+        <div class="card" onclick="showDetails(this)">
+            <div class="card-content">
+                <p class="details">Be Honest</p>
+            </div>
+        </div>
+        <div class="card" onclick="showDetails(this)">
+            <div class="card-content">
+                <p class="details">Love Yourself</p>
+            </div>
+        </div>
+        <div class="card" onclick="showDetails(this)">
+            <div class="card-content">
+                <p class="details">Stay Positive</p>
+            </div>
+        </div>
+        <div class="card" onclick="showDetails(this)">
+            <div class="card-content">
+                <p class="details">Work Hard</p>
+            </div>
+        </div>
+        <div class="card" onclick="showDetails(this)">
+            <div class="card-content">
+                <p class="details">Dream Big</p>
+            </div>
+        </div>
+        <div class="card" onclick="showDetails(this)">
+            <div class="card-content">
+                <p class="details">Be Grateful</p>
+            </div>
+        </div>
+        <div class="card" onclick="showDetails(this)">
+            <div class="card-content">
+                <p class="details">Embrace Challenges</p>
+            </div>
+        </div>
+        <div class="card" onclick="showDetails(this)">
+            <div class="card-content">
+                <p class="details">Stay Humble</p>
+            </div>
+        </div>
+        <div class="card" onclick="showDetails(this)">
+            <div class="card-content">
+                <p class="details">Be Brave</p>
+            </div>
+        </div>
+        <div class="card" onclick="showDetails(this)">
+            <div class="card-content">
+                <p class="details">Help Others</p>
+            </div>
+        </div>
+        <div class="card" onclick="showDetails(this)">
+            <div class="card-content">
+                <p class="details">Stay Curious</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showDetails(card) {
+            const details = card.querySelector('.details');
+            details.style.display = details.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+
+</html>
